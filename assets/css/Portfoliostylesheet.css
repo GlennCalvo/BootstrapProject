@@ -1,0 +1,196 @@
+	
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;1,400&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;1,400&family=Taviraj:wght@200&display=swap');
+	* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+	scroll-behavior: smooth;
+}
+body{
+
+background: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );;
+scroll-behavior: smooth;
+}
+@keyframes fade-up {
+	0%{
+		opacity: 0;
+		transform: translateY(30px) scale(0.9);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px) scale(1);
+	}
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px 100 px;
+	display: flex;
+	
+	align-items: center;
+	z-index: 100;
+}
+.logo {
+	padding: 20px;
+	font-size: 4em;
+	color:whitesmoke;
+	pointer-events: none;
+	margin-right: 280px;
+}
+.navigation a {
+	text-decoration: none;
+	color: white;
+	padding: 6px 20px;
+	border-radius: 20px;
+	margin: 0 5px;
+	font-weight: 600;
+	font-size: 25px;
+	text-align: left;
+	scroll-behavior: smooth;
+}
+
+.navigation a:hover, .navigation a.active{
+	background: #19376D;
+	color: #fff;
+}
+.parallax{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font:;
+	overflow: hidden;
+	}
+#text {
+	position: absolute;
+	font-size: 8em;
+	color: #fff;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.0);
+	animation: fade-up 0.5s;
+
+}
+
+.parallax img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	pointer-events: none;
+}
+
+.AboutMe	{
+
+	background-color: linear;
+
+  	background-size: 100%;
+  	background-repeat: no-repeat;
+    background-position:bottom;
+  	width: 100%;
+  		padding:80px;
+	height:110vh;
+	animation: fade-up 0.5s
+
+}
+
+
+.Project{
+	background-color: linear;
+  	background-image:  url("wavefooter2.png");
+  	background-size: 100%;
+  	background-repeat: no-repeat;
+    background-position:bottom;
+  	width: 100%;
+	position: relative;
+	padding:30px 0px 0px -15px;
+	height: 105vh;
+		scroll-behavior: smooth;
+}
+
+.Project h2	{
+	text-align: center;
+	color: white;
+	
+}
+
+.Resume{
+
+  	background-image:  url("wave3.png");
+  	background-size: 100%;
+  	background-repeat: no-repeat;
+ background-position: top;
+  	width: 100%;
+	position: relative;
+	height: 100vh;
+
+}
+
+
+.AboutMe h1 {
+	color:whitesmoke;
+	font-size: 90px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.0);
+	animation: fade-up 0.5s;
+
+}
+
+
+.AboutMe img
+{
+	float: left;
+	margin-right: 75px;
+	width: 400px;
+	height: auto;
+
+
+}
+
+.AboutMe h2{
+	padding-top: 40px;
+	margin-right: 5em;
+	color: whitesmoke;
+	font-size: 5em;
+
+
+	
+
+}
+.AboutMe h3{
+	position: absolute;
+	width: 900px;
+	right: 12em;
+	text-align: justify;
+	color: whitesmoke;
+	font-size: 30px;
+	font-family: Taviraj ;
+
+
+	
+}
+
+.Project h1{
+	color: white;
+	font-size: 90px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.0);
+	margin-left: 70px; 
+}
+
+.Resume h1{
+	color: white;
+	font-size: 90px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.0);
+	margin-left: 70px; 
+}
+
+.button a {
+	align-content: center	;
+}
+

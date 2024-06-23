@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FreshDish Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #003d30;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            color: #ffffff;
+            margin: 20px 0;
+        }
+
+        h2 {
+            color: #ffffff;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            margin-bottom: 20px;
+        }
+
+        .category-button {
+            background-color: #007054;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .category-button:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #003d30;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            color: #ffffff;
+        }
+
+        th {
+            background-color:#003d30;
+            font-size: 20px;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+        .category {
+            display: none;
+        }
+
+        .category.active {
+            display: block;
+        }
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .floating-button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon inside the button */
+        .floating-button i {
+            font-size: 24px;
+        }
+   
+
+    </style>
+    <script>
+        function toggleCategory(category) {
+            var categories = document.querySelectorAll('.category');
+            categories.forEach(function(el) {
+                el.classList.remove('active');
+            });
+            var selectedCategory = document.querySelector('.' + category);
+            selectedCategory.classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <a href="../FinalProject.html" class="floating-button">
+        Back
+    </a>
+    <center>
+        <h1>FreshDish Restaurant</h1>
+        <div class="buttons">
+            <button class="category-button" onclick="toggleCategory('maindish')">Maindish</button>
+            <button class="category-button" onclick="toggleCategory('salad')">Vegetables Salads</button>
+            <button class="category-button" onclick="toggleCategory('desserts')">Desserts</button>
+            <button class="category-button" onclick="toggleCategory('drinks')">Drinks</button>
+            <button class="category-button" onclick="toggleCategory('addons')">Addons</button>
+        </div>
+        <h2>MENU</h2>
+        <hr>
+
+        <div class="category maindish active">
+            <table>
+                <tr>
+                    <th>MainDish</th>
+                    <th></th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/bulalo.jpeg" height="100" width="100"></td>
+                    <td>Bulalo</td>
+                    <td>P800</td>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/miso.jpeg" height="100" width="100"></td>
+                    <td>Sinigang Sa Miso</td>
+                    <td>P700</td>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/manok.jpeg" height="100" width="100"></td>
+                    <td>Sinigang na Manok</td>
+                    <td>P800</td>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/pompano.jpeg" height="100" width="100"></td>
+                    <td>Grilled Pompano</td>
+                    <td>P600</td>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/Tilapia.jpeg" height="100" width="100"></td>
+                    <td>Steamed Tilapia</td>
+                    <td>P500</td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr>
+
+        <div class="category salad">
+            <table>
+                <tr>
+                    <th>Vegetables</th>
+                    <th></th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/Salad.jpeg" height="100" width="100"></td>
+                    <td>Laudato Si' Salad</td>
+                    <td>P350</td>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/Vegetable Salad.jpeg" height="100" width="100"></td>
+                    <td>Vegetable Salad</td>
+                    <td>P200</td>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/Garden Salad.jpeg" height="100" width="100"></td>
+                    <td>Bahay Kubo'Garden Salad</td>
+                    <td>P600</td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr>
+
+        <div class="category desserts">
+            <table>
+                <tr>
+                    <th>Desserts</th>
+                    <th></th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/Halo-Halo.jpeg" height="100" width="100"></td>
+                    <td>Classic Filipino Halo-Halo</td>
+                    <td>P150</td>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/Mais Con Yelo.jpeg" height="100" width="100"></td>
+                    <td>Mais Con Yelo</td>
+                    <td>P100</td>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/Leche Plan.jpeg" height="100" width="100"></td>
+                    <td>Leche Plan</td>
+                    <td>P300</td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr>
+
+        <div class="category drinks">
+            <table>
+                <tr>
+                    <th>Drinks</th>
+                    <th></th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/Passion Fruit.jpeg" height="100" width="100"></td>
+                    <td>Passion Fruit</td>
+                    <td>P150</td>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/Buko Juice.jpeg" height="100" width="100"></td>
+                    <td>Buko Juice</td>
+                    <td>P100</td>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/Minted Strawberry Juice.jpeg" height="100" width="100"></td>
+                    <td>Minted Strawberry Juice</td>
+                    <td>P100</td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr>
+
+        <div class="category addons">
+            <table>
+                <tr>
+                    <th>Add-Ons</th>
+                    <th></th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/Rice.jpeg" height="100" width="100"></td>
+                    <td>Rice</td>
+                    <td>P40</td>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/Bottled Water.jpeg" height="100" width="100"></td>
+                    <td>Bottled Water</td>
+                    <td>P35</td>
+                </tr>
+                <tr>
+                    <td><img src="restaurant/Salad Sauce.jpeg" height="100" width="100"></td>
+                    <td>Salad Sauce</td>
+                    <td>P30</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    </center>
+</body>
+</html>

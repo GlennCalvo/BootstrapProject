@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+<style>
+      .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .floating-button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon inside the button */
+        .floating-button i {
+            font-size: 24px;
+        }
+
+
+</style>
+
+
+</head>
+
+
+<a href="../FinalProject.html" class="floating-button">
+    Back</a>
+<body class="">
+    <div class ="imghdr">
+        <img  src ="image/imghdr2.jpg" alt ="image">
+    </div>
+    <div class="container">
+       
+        <div class ="navbar">
+            <ul>
+                <li><a href="#tshirt">TShirts</a></li>
+                <li><a href="#jeans">Jeans</a></li>
+                <li><a href="#colognes">Colognes</a></li>
+                <li><a href="#jacket">Jacket</a></li>
+                <li><a href="#Accesories">Accesories</a></li>
+                <li><a href="Stocks.html">Stocks</a></li>
+            </ul>   
+            </div>
+        <header>
+            <h1></h1>
+            <div class="shopping">
+                <img src="image/shopping.svg">
+                <span class="quantity">0</span>
+            </div>
+        </header>
+
+        <div class="list">
+          
+        </div>
+    </div>
+    <div class="card">
+        <h1>Your Cart</h1>
+        <ul class="listCard">
+        </ul>
+      
+        <div class = "cashReceived">
+            <label for="cashReceived">Cash Received: </label>
+            <input type="number" id="cashReceived" min="0">
+        </div>
+        <div class="discount-options">
+            <label>
+                <input type="radio" name="discount" value="0.30" onclick="applyDiscount(0.30)">
+                PWD (30% Discount)
+            </label>
+            <label>
+                <input type="radio" name="discount" value="0.20" onclick="applyDiscount(0.20)">
+                Senior (20% Discount)
+            </label>
+            <label>
+                <input type="radio" name="discount" value="0.10" onclick="applyDiscount(0.10)">
+                Student (10% Discount)
+            </label>
+            <div class = "totalamount">Total Amount:  <div class="total">0</div></div>
+          
+        </div>
+        <div class="checkOut">
+            <button onclick="confirmCheckout()">Checkout</button>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
